@@ -1,0 +1,63 @@
+,en
+START,Start
+OPTIONS,Options
+QUIT,Quit
+UPGRADES,Upgrades
+MAP,Map
+CREDITS,Credits
+COST,Cost
+DISTANCE,Distance
+SECURITY,Security
+REWARD,Reward
+SCORE,Score
+DELIVERED,Delivered Packages
+HOME_SYSTEM,"This is your home system."
+CURRENT_SYSTEM,"This is your current location."
+SAFE,Safe
+MODERATE,Moderate
+LOW,Low
+DANGER,Danger
+UPGRADE,Upgrade
+DOWNGRADE,Downgrade
+REACTOR_UPGRADE,Reactor Upgrade
+WEAPON_UPGRADE,Weapon Upgrade
+SHIELD_UPGRADE,Shield Upgrade
+ENGINE_UPGRADE,Engine Upgrade
+ARMOR_UPGRADE,Armor Upgrade
+DRIVE_UPGRADE,Hyper Drive Upgrade
+UPG_ENERGY,Energy +1
+UPG_WEAPON,Max Weapon Energy +1
+UPG_SHIELD,Max Shield Energy +1
+UPG_ENGINE,Max Engine Energy +1
+UPG_ARMOR,Armor +1
+UPG_DRIVE,Travel Speed +10%
+LAST_UPG_ENERGY,Energy +1
+LAST_UPG_WEAPON,+20% Fire Rate
+LAST_UPG_SHIELD,+20% Recharge Rate
+LAST_UPG_ENGINE,+20% SPEED
+LAST_UPG_ARMOR,Shield +1
+LAST_UPG_DRIVE,Energy +1
+MOVE_UP,Move Up
+MOVE_DOWN,Move Down
+MOVE_LEFT,Move Left
+MOVE_RIGHT,Move Right
+SHOOT,Shoot
+INC_WEAPON,Inc Weapon
+DEC_WEAPON,Dec Weapon
+INC_SHIELD,Inc Shield
+DEC_SHIELD,Dec Shield
+INC_ENGINE,Inc Engine
+DEC_ENGINE,Dec Engine
+ADD_KEYBIND,"Add a new keybind for %s."
+LEFT,Left
+RIGHT,Right
+MOUSE_BUTTON,Mouse Button
+JOYPAD_BUTTON,Joypad Button
+KEY_PRESSED,"Key pressed:"
+IS,is
+ARE,are
+MISSION_ACCOMPLISHED,"Mission accomplished!"
+RECEIVED_REWARD,"The {cargo} {is} unloaded while you receive you receive the payment of {payment}."
+MISSION_FAILED,"Mission failed!"
+MISSION_FAILED_TEXT,"You had to eject your cargo and barely made it back to %s."
+

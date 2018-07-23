@@ -1,0 +1,334 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://scripts/enemies/mine.gd" type="Script" id=1]
+[ext_resource path="res://images/particles/mine.png" type="Texture" id=2]
+[ext_resource path="res://images/particles/mine_glow.png" type="Texture" id=3]
+[ext_resource path="res://images/particles/bomb_impact.png" type="Texture" id=4]
+[ext_resource path="res://images/particles/explosion_blue.png" type="Texture" id=5]
+[ext_resource path="res://sounds/explosion_emp.wav" type="AudioStream" id=6]
+[ext_resource path="res://sounds/boom.wav" type="AudioStream" id=7]
+[ext_resource path="res://sounds/warning.wav" type="AudioStream" id=8]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+
+render_priority = 0
+blend_mode = 1
+light_mode = 0
+
+[sub_resource type="CanvasItemMaterial" id=2]
+
+render_priority = 0
+blend_mode = 1
+light_mode = 0
+
+[sub_resource type="CircleShape2D" id=3]
+
+custom_solver_bias = 0.0
+radius = 12.0
+
+[sub_resource type="CanvasItemMaterial" id=4]
+
+render_priority = 0
+blend_mode = 1
+light_mode = 0
+
+[sub_resource type="CircleShape2D" id=5]
+
+custom_solver_bias = 0.0
+radius = 64.0
+
+[sub_resource type="Animation" id=6]
+
+resource_name = "explode"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Explosion:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Explosion:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Explosion:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.501961 ), Color( 1, 1, 1, 0.501961 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("SoundExplosion:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 2,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=7]
+
+resource_name = "armed"
+length = 0.8
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Glow:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0.25098, 0.12549, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 0.501961, 0.25098, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 0.25098, 0.12549, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 0.25098, 0.12549, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 0.501961, 0.25098, 1 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("SoundExplosion:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 2,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Explosion:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Explosion:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 9 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Explosion:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Glow:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "method"
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+
+[node name="Mine" type="Area2D"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 13
+collision_mask = 13
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
+hp = 2
+score = 2
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Animation", "Visibility" ]
+
+[node name="Glow" type="Sprite" parent="." index="1"]
+
+modulate = Color( 1, 0.25098, 0.12549, 1 )
+light_mask = 0
+material = SubResource( 1 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+
+[node name="Explosion" type="Sprite" parent="." index="2"]
+
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+light_mask = 0
+material = SubResource( 2 )
+texture = ExtResource( 4 )
+vframes = 2
+hframes = 5
+_sections_unfolded = [ "Animation", "Material", "Region", "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
+
+visible = false
+shape = SubResource( 3 )
+
+[node name="AreaExplosion" type="Area2D" parent="." index="4"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 2
+collision_mask = 2
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="Explosion" type="Sprite" parent="AreaExplosion" index="0"]
+
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+light_mask = 0
+material = SubResource( 4 )
+texture = ExtResource( 5 )
+vframes = 2
+hframes = 5
+_sections_unfolded = [ "Animation", "Material", "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaExplosion" index="1"]
+
+visible = false
+shape = SubResource( 5 )
+
+[node name="SoundExplosion" type="AudioStreamPlayer2D" parent="AreaExplosion" index="2"]
+
+stream = ExtResource( 6 )
+volume_db = -4.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 4000.0
+attenuation = 1.0
+bus = "Sound"
+area_mask = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AreaExplosion" index="3"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/explode = SubResource( 6 )
+blend_times = [  ]
+
+[node name="SoundExplosion" type="AudioStreamPlayer2D" parent="." index="5"]
+
+stream = ExtResource( 7 )
+volume_db = -4.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 4000.0
+attenuation = 1.0
+bus = "Sound"
+area_mask = 1
+
+[node name="SoundBeep" type="AudioStreamPlayer2D" parent="." index="6"]
+
+stream = ExtResource( 8 )
+volume_db = -14.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 4000.0
+attenuation = 1.0
+bus = "Sound"
+area_mask = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="7"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/armed = SubResource( 7 )
+anims/explode = SubResource( 8 )
+blend_times = [  ]
+
+

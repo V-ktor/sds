@@ -1,0 +1,6 @@
+asteroid_c.png, enemy01_c.png, enemy02_c.png:
+Copyright: Viktor Hahn
+License: CC-BY 4.0
+
+*:
+License: CC0

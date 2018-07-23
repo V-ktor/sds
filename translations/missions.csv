@@ -1,0 +1,62 @@
+,en
+PACKAGE,Package
+PACKAGES,Packages
+CRATE,Crate
+CRATES,Crates
+CARGO_BOXES,Cargo Boxes
+CARGO_BOX,Cargo Box
+BARREL,Barrel
+BARRELS,Barrels
+BOX,Box
+CHEST,Chest
+LETTERS,Letters
+LOVE_LETTER,Love Letter
+TOP_SECRET_DOCUMENTS,Top Secret Documents
+GOLD_BARS,Gold Bars
+TUNGSTEN,Tungsten
+PLUTONIUM,Plutonium
+DIAMONDS,Diamonds
+FISH,Fish
+CHEESE,Cheese
+SWISS_CHEESE,Swiss Cheese
+PIZZAS,Pizzas
+WATER_TANKS,Water Tanks
+ICE_CREAM,Ice Cream
+PARFAIT,Parfait
+CRUDE_OIL,Crude Oil
+BAROMETERS,Barometers
+LUXURY_GOODS,Luxury Goods
+ANTIBIOTICS,Antibiotics
+MEDICINE,Medicine
+MEDICAL_SUPPLIES,Medical Supplies
+SYRINGES,Syringes
+EMPTY_CARGO_CONTAINERS,Empty Cargo Containers
+VACUUM_CHAMBERS,Vacuum Chambers
+ALIVE_RODENTS,Alive Rodents
+AIR,Air
+SCHRÖDINGERS_CAT,Schrödinger's Cat
+BLACKBOX,Blackbox
+SCIENTIFIC_DEVICES,Scientific Devices
+DATA_CUBE,Data Cube
+DATA_CUBES,Data Cubes
+PANDORAS_CUBE,"Pandora's Cube"
+WOLF_GOAT_CABBAGE,"wolf, a goat and a cabbage"
+SPACE,Space
+MEGA,Mega
+HYPER,Hyper
+CYBER,Cyber
+ENTROPY_INVERTER,Entropy Inverter
+AM_CONVERTER,Antimatter-Matter Converter
+QUANTUM_COMPUTER,Quantum Computer
+PLASMA_TRASH_VAPORISER,Plasma Trash Vaporiser
+BRAIN_STIMULATOR,Brain Stimulator
+TELEPORTER,Teleporter
+LASER_PULSE_CANNON,Laser Pulse Cannon
+LIGHT_SABER,Light Saber
+OF," of "
+A,"a"
+DELIVERY_1,"Transport {ammount} {cargo} to {destination}."
+DELIVERY_2,"Deliver {ammount} {cargo} to {destination}."
+DELIVERY_3,"Generous payment offered for succesfull delivery of {ammount} {cargo} to {destination}."
+DELIVERY_4,"Immediate delivery of {ammount} {cargo} to {destination} required."
+
